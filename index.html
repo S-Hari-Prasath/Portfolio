@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script type="module" src="index.js" defer></script>
+  <title>Hari Prasath Portfolio</title>
+</head>
+
+<body  style="background-color: black;">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>H</span>ari <span>P</span>rasath <span>S</span></h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#skills" data-after="skill">Skills</a></li>
+            <li><a href="#services" data-after="service">Services</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1> I'm <span></span></h1>
+        <h1>HARI PRASATH <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <br>
+  <!-- End Hero Section  -->
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h1 class="section-title">My <span>Projects</span></h1>
+    <div class="project-cards">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-image"><img src="img/p1.jpg" alt="Project One" class="project-image"></div>
+        <div class="project-info">
+          <h2 class="project-title">WATER ALERT SYSTEM</h2>
+          <a href="img/water.pdf" class="view-project-btn" target="_blank">View Project</a>
+          <button class="description-btn" data-description="Our water alert system notifies users
+           via SMS or call when water is supplied to specific locations. Water sensors detect flow 
+           and send data to a microcontroller, which relays it to a GSM module. Users register online 
+           or at a local center, choosing their alert preferences.">View Description</button>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image"><img src="img/p2.webp" alt="Project Two" class="project-image"></div>
+        <div class="project-info">
+          <h2 class="project-title"> BASIC RESTAURANT WEB DESIGN</h2>
+          <a href="https://s-hari-prasath.github.io/Figma-Design" class="view-project-btn" target="_blank">View Project</a>
+          <button class="description-btn" data-description="This Figma-designed webpage for Delizh Kitchen is vibrant and user-friendly, 
+          featuring a warm color scheme and easy navigation. It showcases popular dishes with enticing graphics and star ratings, and includes
+           an engaging About Us section and a testimonial carousel for added authenticity.">View Description</button>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image"><img src="img/p3.jpg" alt="Project Three" class="project-image"></div>
+        <div class="project-info">
+          <h2 class="project-title">DYNAMIC LOGIN PAGE</h2>
+          <a href="https://s-hari-prasath.github.io/Dynamic-Login" class="view-project-btn" target="_blank">View Project</a>
+          <button class="description-btn" data-description="This dynamic login page features a sleek, modern design with
+           seamless transitions between sign-in and sign-up forms. It includes social media login icons for Google, Facebook, 
+           GitHub, and LinkedIn, and is both user-friendly and responsive. The toggle panel enhances the experience with welcoming
+            messages for returning and new visitors.">View Description</button>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-image"><img src="img/p4.jpg" alt="Project Four" class="project-image"></div>
+        <div class="project-info">
+          <h2 class="project-title">CAMPUS BUS LOCATOR</h2>
+          <a href="img/CAMPUS BUS LOCATOR.pdf" class="view-project-btn" target="_blank">View Project</a>
+          <button class="description-btn" data-description="In today's fast-paced campus environment, students frequently struggle to 
+          catch the campus bus on time, causing extra stress and wasted chances. To address this 
+          issue, we introduce the Campus Bus Locator, an innovative tool meant to make students' 
+          daily commutes more efficient.">View Description</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up for description -->
+    <div id="description-popup" class="popup">
+      <div class="popup-content">
+        <span id="close-popup">&times;</span>
+        <p id="popup-description"></p>
+      </div>
+    </div>
+  </section>
+   <!-- End Project Section -->
+    <!-- Skill Section -->
+    <h1 class="section-title">My <span>Skills</span></h1>
+    <section id="skills">
+      <div class="skills-container">
+          <div class="skills-box">
+              <div class="page active" id="programming-skills">
+                  <h2 style="color:rgba(255, 255, 0, 0.792);"><center>PROGRAMMING SKILLS</center></h2>
+                  <div class="skills-row">
+                      <div class="skill-icon" onclick="showPercentage(this, 90)">
+                          <div class="icon-wrapper">
+                              <img src="img/s1.png" alt="html" />
+                              <div class="percentage">90%</div>
+                          </div>
+                          <span>HTML</span>
+                      </div>
+                      <div class="skill-icon" onclick="showPercentage(this, 85)">
+                          <div class="icon-wrapper">
+                              <img src="img/s2.png" alt="CSS" />
+                              <div class="percentage">85%</div>
+                          </div>
+                          <span>CSS</span>
+                      </div>
+                      <div class="skill-icon" onclick="showPercentage(this, 75)">
+                          <div class="icon-wrapper">
+                              <img src="img/s3.png" alt="JavaScript" />
+                              <div class="percentage">75%</div>
+                          </div>
+                          <span>JavaScript</span>
+                      </div>
+                      <div class="skill-icon" onclick="showPercentage(this, 75)">
+                          <div class="icon-wrapper">
+                              <img src="img/s4.png" alt="  Bootstrap" />
+                              <div class="percentage">75%</div>
+                          </div>
+                          <span>Bootstrap</span>
+                      </div> 
+                      <div class="skill-icon" onclick="showPercentage(this, 70)">
+                        <div class="icon-wrapper">
+                            <img src="img/s7.png" alt="Mysql" />
+                            <div class="percentage">70%</div>
+                        </div>
+                        <span>MySql</span>
+                    </div>
+                    <div class="skill-icon" onclick="showPercentage(this, 85)">
+                      <div class="icon-wrapper">
+                          <img src="img/s8.png" alt="Msoffice" />
+                          <div class="percentage">85%</div>
+                      </div>
+                      <span>MSOffice</span>
+                  </div>
+                  <div class="skill-icon" onclick="showPercentage(this, 90)">
+                         <div class="icon-wrapper">
+                              <img src="img/s5.png" alt="Python" />
+                              <div class="percentage">90%</div>
+                          </div>
+                          <span>Python</span>
+                  </div>
+                  <div class="skill-icon" onclick="showPercentage(this, 30)">
+                    <div class="icon-wrapper">
+                        <img src="img/s14.png" alt="Firebase" />
+                        <div class="percentage">30%</div>
+                    </div>
+                    <span>Firebase</span>
+                 </div>
+                 <div class="skill-icon" onclick="showPercentage(this, 40)">
+                  <div class="icon-wrapper">
+                      <img src="img/s15.png" alt="C++" />
+                      <div class="percentage">40%</div>
+                  </div>
+                  <span>C++</span>
+               </div>
+               <div class="skill-icon" onclick="showPercentage(this, 40)">
+                <div class="icon-wrapper">
+                    <img src="img/s16.png" alt="PHP" />
+                    <div class="percentage">40%</div>
+                </div>
+                <span>PHP</span>
+             </div>
+                  <div class="skill-icon" onclick="showPercentage(this, 50)">
+                        <div class="icon-wrapper">
+                            <img src="img/s6.png" alt="MongoDB" />
+                            <div class="percentage">50%</div>
+                        </div>
+                        <span>MongoDB</span>
+                    </div>
+                  </div>
+              </div>
+              <div class="page" id="designing-skills">
+                  <h2 style="color: rgba(255, 255, 0, 0.792);"><center>DESIGNING SKILLS</center></h2>
+                  <div class="skills-row">
+                      <div class="skill-icon" onclick="showPercentage(this, 85)">
+                          <div class="icon-wrapper">
+                              <img src="img/s11.png" alt="Photoshop" />
+                              <div class="percentage">85%</div>
+                          </div>
+                          <span>Photoshop</span>
+                      </div>
+                      <div class="skill-icon" onclick="showPercentage(this, 80)">
+                          <div class="icon-wrapper">
+                              <img src="img/s13.png" alt="Illustrator" />
+                              <div class="percentage">80%</div>
+                          </div>
+                          <span>Illustrator</span>
+                      </div>
+                      <div class="skill-icon" onclick="showPercentage(this, 80)">
+                          <div class="icon-wrapper">
+                              <img src="img/s9.png" alt="Figma" />
+                              <div class="percentage">80%</div>
+                          </div>
+                          <span>Figma</span>
+                      </div>
+                      <div class="skill-icon" onclick="showPercentage(this, 70)">
+                          <div class="icon-wrapper">
+                              <img src="img/s12.png" alt="XD" />
+                              <div class="percentage">70%</div>
+                          </div>
+                          <span>Adobe XD</span>
+                      </div>
+                      <div class="skill-icon" onclick="showPercentage(this, 90)">
+                          <div class="icon-wrapper">
+                              <img src="img/s10.png" alt="Canva" />
+                              <div class="percentage">90%</div>
+                          </div>
+                          <span>Canva</span>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <button class="slider-button" onclick="togglePage()">Toggle Skills</button>
+          </div>
+      </div>
+  </section>
+  <!-- End Skill Section -->
+
+  <!-- Services Section -->
+    <section id="services">
+        <h1 class="section-title">Our <span>Services</span></h1>
+        <br>
+        <br>
+        <div class="services container">
+            <div class="service-items">
+                
+                <div class="service-item">
+                    <div class="lines"></div> <!-- Add this for the rotating border -->
+                    <div class="icon">
+                        <img src="img/web.png" alt="Web Development Icon" />
+                    </div>
+                    <br>
+                    <div class="service-info">
+                        <h1>Web Development / Design</h1>
+                        <p>We build responsive and high-performance websites with modern design and functionality to ensure your online presence stands out.</p>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="lines"></div> <!-- Add this for the rotating border -->
+                    <div class="icon">
+                        <img src="img/u.png" alt="UI/UX Design Icon" />
+                    </div>
+                    <br>
+                    <div class="service-info">
+                        <h1>UI/UX Design</h1>
+                        <p>Providing intuitive, user-centered designs that enhance the user experience with a focus on creativity and usability.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="lines"></div> <!-- Add this for the rotating border -->
+                    <div class="icon">
+                        <img src="img/co2.png" alt="Content Writing Icon" />
+                    </div>
+                    <br>
+                    <div class="service-info">
+                        <h1>Content / Copy Writing</h1>
+                        <p>Offering professional content writing services, specializing in SEO optimization and engaging copy for websites and blogs.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="lines"></div> <!-- Add this for the rotating border -->
+                    <div class="icon">
+                        <img src="img/logo.png" alt="Logo Design Icon" />
+                    </div>
+                    <br>
+                    <div class="service-info">
+                        <h1>Logo Design</h1>
+                        <p>Creating custom logos that reflect your brand’s identity, helping you stand out in a crowded market.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- End Services Section -->
+  <section id="certifications">
+  <h1 style="color: aliceblue;"><center>CERTIFICATIONS</center></h1> <br> <br>
+    <center> <div class="container swiper">
+    <div class="slider-wrapper">
+      <div class="card-list swiper-wrapper">
+        <div class="card-item swiper-slide">
+          <img src="img/image5.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">NGCS</h2>
+          <p class="user-profession">WORKSHOP</p>
+          <a href="img/image5.jpg" class="cta">View</a>
+        </div>
+        <div class="card-item swiper-slide">
+          <img src="img/image6.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">CIT COLLEGE</h2>
+          <p class="user-profession">PROJECT</p>
+          <a href="img/image6.jpg" class="cta">View</a>
+        </div>
+        <div class="card-item swiper-slide">
+          <img src="img/image7.jpg"alt="User Image" class="user-image">
+          <h2 class="user-name">PSR COLLEGE</h2>
+          <p class="user-profession">PROJECT</p>
+          <a href="img/image7.jpg" class="cta">View</a>
+        </div>
+        <div class="card-item swiper-slide">
+          <img src="img/image8.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">CODEBIND TECHNOLOGIES</h2>
+          <p class="user-profession">INTERNSHIP</p>
+          <a href="img/image8.jpg" class="cta">View</a>
+        </div>
+        <div class="card-item swiper-slide">
+          <img src="img/image9.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">CODEBIND TECHNOLOGIES</h2>
+          <p class="user-profession">PROJECT</p>
+          <a href="img/image9.jpg" class="cta">View</a>
+        </div>
+        <div class="card-item swiper-slide">
+          <img src= "img/image10.jpg"  alt="User Image" class="user-image">
+          <h2 class="user-name">CODEBIND TECHNOLOGIES</h2>
+          <p class="user-profession">WORKSHOP</p>
+          <a href="img/image10.jpg" class="cta">View</a>
+        </div>
+        <div class="card-item swiper-slide">
+          <img src= "img/img2.png"  alt="User Image" class="user-image">
+          <h2 class="user-name">PANTECH E LEARNNG</h2>
+          <p class="user-profession">INTERNSHIP</p>
+          <a href="img/img1.pdf" class="cta">View</a>
+        </div>
+        <div class="card-item swiper-slide">
+          <img src="img/image11.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">CODEBIND TECHNOLOGIES</h2>
+          <p class="user-profession">INPLANT TRAINING</p>
+          <a href="img/image11.jpg" class="cta">View</a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+  </div>
+    </center>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src= "img/image0.png" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title" style="color: black;">About <span>me</span></h1>
+        <h2>( WEB, LOGO, UIUX )DESIGNER | COPY AND CONTENT WRITING</h2>
+        <p>I am a committed undergraduate student pursuing a Bachelor of Engineering in Computer Science and
+          enabling me to efficiently handle and analyze data.
+          proficiency in multiple programming languages, including Python, HTML, CSS, and JavaScript, and
+          have hands-on experience with frameworks such as React and Bootstrap for creating dynamic,
+          responsive web applications. My adept use of integrated development environments like VS Code and
+          Anaconda, primarily in Windows environments, complements my technical skill set. Additionally, I
+          have a solid foundation in database management, encompassing both SQL and NoSQL technologies,enabling me to efficiently handle and analyze data.</p>
+        <a href="img/image14.pdf" class="cta">View Resume</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact" style="color: aliceblue;">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span>info</span></h1>
+      </div>
+      <br>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="img/ph.jpeg" /></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+91 7339503667</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="img/em.jpg" /></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>shariprasath011@gmail.com</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="img/lin.jpg" /></div>
+          <div class="contact-info">
+            <h1>LinkedIn</h1>
+            <h2><a href="https://www.linkedin.com/in/shariprasath" target="_blank" style="color: aliceblue;">LinkedIn profile</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+     <!-- Form -->
+     <h1 class="section-title">Further<span>MORE</span> con<span>tact</span></h1>
+      <section id="form">
+     <div class="you1">
+      <div class="form-container">
+          <div class="form-image">
+              <img src="img/card.jpeg" alt="Contact Us Image">
+          </div>
+          <div class="contact-form">
+              <form>
+                  <div class="form-group">
+                      <label for="name">Enter your full name*</label>
+                      <input type="text" id="username" name="name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Enter your e-mail*</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Type your message</label>
+                      <textarea id="message" name="message"></textarea>
+                  </div>
+                  <button type="submit" id="submit" class="submit-btn">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+  <script type="module">
+      // Firebase SDK imports (if using Firebase)
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+      import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+      // Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyA5HJcFGkD6lAfqoHpW-ukpgxCiEslOu4Y",
+          authDomain: "portfolio-61fb0.firebaseapp.com",
+          projectId: "portfolio-61fb0",
+          storageBucket: "portfolio-61fb0.appspot.com",
+          messagingSenderId: "61058137663",
+          appId: "1:61058137663:web:64013ded4be4ba7a4c028a",
+          measurementId: "G-LPDN8FR91F"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Handle form submission
+      document.getElementById("submit").addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("username").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          // Use the email as the document ID
+          setDoc(doc(db, "users", email), {
+              name: name,
+              email: email,
+              message: message
+          }).then(() => {
+              alert("Submission successful!");
+          }).catch((error) => {
+              console.error("Error submitting data: ", error);
+              alert("Error submitting data. Please try again.");
+          });
+      });
+  </script>
+  <!-- end Form -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+        <div class="brand">
+            <h1><span>H</span>ari <span>P</span>rasath</h1>
+        </div>
+        <h2>--For Social Contact--</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="https://github.com/S-Hari-Prasath">
+                <img src="img/g1.png"/>
+            </a>
+        </div>
+            <div class="social-item">
+                <a href="https://www.linkedin.com/in/shariprasath">
+                    <img src="img/lin.webp" />
+                </a>
+            </div>
+            <div class="social-item">
+              <a href="https://join.skype.com/invite/y1jcWffky3mE">
+                  <img src="img/j4.webp"/>
+              </a>
+          </div>
+        </div>
+        <div class="nav-list-footer">
+            <ul>
+                <li><a href="#hero" data-after="Home">Home</a></li>
+                <li><a href="#projects" data-after="Projects">Projects</a></li>
+                <li><a href="#skills" data-after="skill">Skills</a></li>
+                <li><a href="#services" data-after="service">Services</a></li>
+                <li><a href="#about" data-after="About">About</a></li>
+                <li><a href="#contact" data-after="Contact">Contact</a></li>
+            </ul>
+        </div>
+        <p>Copyright © 2024 Hari Prasath. All rights reserved</p>
+    </div>
+</section>
+
+  <!-- End Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
