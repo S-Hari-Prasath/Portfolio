@@ -259,7 +259,7 @@ header .logo {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: crimson;
+	background-color: rgba(255, 255, 255, 0.614);
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
@@ -300,12 +300,12 @@ header .logo {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     width: 300px;
     height: 400px;
-    box-shadow: 0px 5px 15px rgba(149, 0, 0, 0.626);
+    box-shadow: 0px 5px 15px rgba(100, 168, 191, 0.638);
     transition: all 0.5s ease-in-out;
     transform: scale(1);
     position: relative;
@@ -350,12 +350,13 @@ header .logo {
     text-decoration: none;
     background-color: #ceb917;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .description-btn {
-    background-color: #00ba66;
+    background-color: #000dff9c;
+	border-color: white;
 }
 
 .view-project-btn:hover {
@@ -397,9 +398,9 @@ header .logo {
     left: 50%;
     transform: translate(-50%, -50%) scale(0); /* Initially scaled down */
     width: 300px;
-    background-color: white;
+    background-color: rgba(0, 225, 255, 0.753);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.495);
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
     z-index: 1000;
     transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
@@ -428,7 +429,29 @@ header .logo {
     transform: translate(-50%, -50%) scale(1); /* Scale to original size */
     animation: bounceEffect 0.8s ease forwards; /* Bounce effect */
 }
-
+/* Keyframes for letter-by-letter animation */
+@keyframes fadeInLetter {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px); /* Optional: move letter upwards as it fades in */
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0); /* Return letter to its original position */
+	}
+  }
+  
+  /* Style for the popup description text */
+  #popup-description span {
+	opacity: 0;
+	display: inline-block;
+	animation: fadeInLetter 0.5s forwards;
+  }
+  
+  #popup-description span:nth-child(n) {
+	animation-delay: calc(var(--index) * 0.05s); /* Delay for each letter */
+  }
+  
 /* Bounce effect for the popup */
 @keyframes bounceEffect {
     0% { transform: translate(-50%, -50%) scale(0.5); }
