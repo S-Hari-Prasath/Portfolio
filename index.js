@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closePopup = document.getElementById('close-popup');
 
     descriptionButtons.forEach(button => {
-        button.addEventListener('click', function (e) {
+        button.addEventListener('click', function () {
             const description = button.getAttribute('data-description');
 
             // Create a bouncing ball effect
@@ -134,8 +134,19 @@ document.addEventListener('DOMContentLoaded', function () {
             bounceBall.addEventListener('animationend', function () {
                 document.body.removeChild(bounceBall);
 
+                // Clear existing description content
+                popupDescription.innerHTML = '';
+
+                // Wrap each letter of the description in a span and add it to the popup
+                const letters = description.split('');
+                letters.forEach((letter, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = letter;
+                    span.style.setProperty('--index', index);
+                    popupDescription.appendChild(span);
+                });
+
                 // Show the pop-up with description
-                popupDescription.textContent = description;
                 popup.classList.add('show');
             });
         });
