@@ -288,7 +288,7 @@ header .logo {
 #projects {
     padding: 50px;
     text-align: center;
-	font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: transparent;
 }
 
@@ -305,6 +305,7 @@ header .logo {
     overflow: hidden;
     width: 300px;
     height: 400px;
+    color:black;
     box-shadow: 0px 5px 15px rgba(100, 168, 191, 0.638);
     transition: all 0.5s ease-in-out;
     transform: scale(1);
@@ -334,6 +335,7 @@ header .logo {
 .project-title {
     font-size: 24px;
     margin-bottom: 10px;
+    color:black;
     text-shadow: 1px 1px 3px rgba(142, 141, 141, 0.681);
 }
 
