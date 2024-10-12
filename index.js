@@ -49,34 +49,52 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(aboutSection);
 });
 
+// certificate
 const swiper = new Swiper('.slider-wrapper', {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 30,
-    // Pagination bullets
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // Responsive breakpoints
-    breakpoints: {
-      0: {
-        slidesPerView: 1
-      },
-      768: {
-        slidesPerView: 2
-      },
-      1024: {
-        slidesPerView: 3
-      }
-    }
-  });
+	loop: true,
+	grabCursor: true,
+	slidesPerView: 3,
+	spaceBetween: 20,
+	// Pagination bullets
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		dynamicBullets: true
+	},
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	// Responsive breakpoints
+	breakpoints: {
+		0: {
+			slidesPerView: 1
+		},
+		768: {
+			slidesPerView: 2
+		},
+		1024: {
+			slidesPerView: 3
+		}
+	},
+	// Function to hide navigation buttons on mobile
+	on: {
+		resize: function() {
+			const windowWidth = window.innerWidth;
+			const nextButton = document.querySelector('.swiper-button-next');
+			const prevButton = document.querySelector('.swiper-button-prev');
+			if (windowWidth <= 768) {
+				nextButton.style.display = 'none';
+				prevButton.style.display = 'none';
+			} else {
+				nextButton.style.display = 'block';
+				prevButton.style.display = 'block';
+			}
+		}
+	}
+});
+
   // skill
   let currentPage = 0;
 const pages = document.querySelectorAll('.page');
