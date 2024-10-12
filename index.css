@@ -912,11 +912,6 @@ h2 {
 		width: 100px;
 		height: 75px;
 	}
-	/* Hide navigation buttons on smaller screens */
-	.swiper-button-next,
-	.swiper-button-prev {
-		display: none;
-	}
 }
  /* End certificate section*/
 /* About Section */
