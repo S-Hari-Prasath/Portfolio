@@ -770,83 +770,165 @@ h2 {
 .section-title span {
 	color: #ff0303e8;
 }
+/* Styling for the company info section */
+.about-company {
+    font-size: 1.3em;
+    color: aliceblue;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cta-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #03eeff;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-link:hover {
+    background-color: #ff03ab;
+    color: #fff;
+}
 
 /*end service*/
 /*certificate section*/
 .slider-wrapper {
-	overflow: hidden;
-	max-width: 1200px;
-	margin: 0 70px 55px;
-  }
-  .card-list .card-item {
-	height: auto;
-	color: #fff;
-	user-select: none;
-	padding: 100px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 10px;
-	backdrop-filter: blur(50px);
-	background:  linear-gradient(60deg, #000000 0%, #4a036b 100%);
-	border: 2px double rgb(73, 70, 70);
-  }
-  .card-list .card-item .user-image {
-	width: 350px;
-	height: 250px;
-	border-radius: 5%;
-	margin-bottom: 40px;
-	border: 6px outset #000000;
-	padding: 4px;
-  }
-  .card-list .card-item .user-profession {
-	font-size: 1.15rem;
-	color: #e3e3e3;
-	font-weight: 800;
-	margin: 14px 0 40px;
-  }
-  .card-list .card-item .message-button {
-	font-size: 1.25rem;
-	padding: 10px 35px;
-	color: #ffffff;
-	border-radius: 3px;
-	font-weight: 800;
-	cursor: pointer;
-	background: #000000;
-	border: 1px solid transparent;
-	transition: 0.2s ease;
-  }
-  .card-list .card-item .message-button:hover {
-	background: linear-gradient(60deg, #000000 0%, #4a036b 100%);
-	border: 5px solid #fff;
-	color: #fff;
-  }
-  .slider-wrapper .swiper-pagination-bullet {
-	background: #fff;
-	height: 9px;
-	width: 9px;
-	opacity: 0.5;
-  }
-  .slider-wrapper .swiper-pagination-bullet-active {
-	opacity: 1;
-  }
-  .slider-wrapper .swiper-slide-button {
-	color: #fff;
-	margin-top: -100px;
-	transition: 0.2s ease;
-  }
-  .slider-wrapper .swiper-slide-button:hover {
-	color: #4658ff;
-  }
-  @media (max-width: 768px) {
-	.slider-wrapper {
-	  margin: 0 10px 40px;
-	}
-	.slider-wrapper .swiper-slide-button {
-	  display: none;
-	}
-  }
+    overflow: hidden;
+    max-width: 1200px;
+	padding: 10px;
+    margin: 0 70px 55px;
+}
+
+/* Card Styles */
+.card-list .card-item {
+    height: 400px;
+    width: 300px;
+    color: #ffffff;
+    user-select: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    background: transparent;
+    box-shadow: 0 5px 10px rgba(255, 69, 0, 0.5);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards; /* Animation for cards */
+}
+.card-list .card-item p {
+    color: #ffffff; /* Sets the text color to white */
+}
+
+
+/* Card hover effect: glowing border */
+.card-list .card-item:hover {
+    border: 2px solid rgba(255, 140, 0, 0.7);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.7); /* Added glow effect */
+}
+
+/* Image Styling */
+.card-list .card-item .user-image {
+    width: 150px;
+    height: 100px;
+    border-radius: 5%;
+    margin-bottom: 20px;
+    border: 3px outset orangered;
+    padding: 0px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Image hover effect */
+.card-list .card-item:hover .user-image {
+    transform: rotate(9deg) scale(1.1); /* Image gets a slight rotation and zoom effect */
+}
+
+/* Updated "View" Button Styling */
+.card-list .card-item button, .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 800;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff5722, #ff9800); /* Gradient background */
+    border: none;
+    transition: background 0.4s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Button hover effect */
+.card-list .card-item button:hover, .message-button:hover {
+    background: linear-gradient(45deg, #ff9800, #ff5722); /* Reverse gradient on hover */
+    box-shadow: 0 5px 20px rgba(255, 140, 0, 0.7); /* Glowing shadow effect */
+    transform: scale(1.1); /* Slight scale on hover */
+    padding: 10px 50px; /* Expands horizontally on hover */
+}
+
+/* Profession styling */
+.card-list .card-item .user-profession {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+    font-weight: 800;
+    margin: 14px 0 40px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Profession hover effect */
+.card-list .card-item:hover .user-profession {
+    color: #ff9800; /* Text color change on hover */
+}
+
+/* Slider bullet and button styles */
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 9px;
+    width: 9px;
+    opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -100px;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: #ff9800; /* Button color change on hover */
+}
+
+/* Fade in effect for the cards */
+@keyframes fadeInUp {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+    .card-list .card-item {
+        height: auto;
+        padding: 50px;
+    }
+}
+
  /* End certificate section*/
 /* About Section */
 #about .about {
